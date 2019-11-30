@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Compte Oiseaux</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="./script/jquery-3.4.1.min.js"></script>
+  <script src="./script/script.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./script/jquery.ui.touch-punch.min.js"></script>
+  <script>
+
+
+
+  </script>
+
+</head>
+<body>
+
+
+<div class="ecran-accueil">
+  <div class="logoPartenaires">
+    <img src="./images/logo-partenaires.png" alt="">
+  </div>
+  <div class="logoAccueil">
+    <img src="./images/logo-accueil.png" alt="">
+  </div>
+  <div class="boutonCommencer">
+    <p>commencer</p>
+  </div>
+
+</div>
+
+
+  <div class="ecran1">
+
+    <div class="header">
+      <img class="logo-header" src="./images/logo-header.png" alt="">
+    </div>
+
+    <div class="wraper">
+      <div class="entier" id="apprendre">
+        <img src="./images/mascotte-apprendre.png" alt="">
+        <p>apprendre</p>
+
+      </div>
+      <div class="entier" id="compter">
+        <img src="./images/mascotte-compter.png" alt="">
+        <p>compter</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="ecran-apprendre" id="1">
+    <div class="header">
+      <img class="logo-header" src="./images/logo-header.png" alt="">
+    </div>
+
+
+    <div class="ecran-apprendre">
+      <div class="header">
+        <img class="logo-header" src="./images/logo-header.png" alt="">
+      </div>
+      <div class="retour retour-apprendre">retour</div>
+      <div class="titreApprendre"><h1>Espèces</h1> <p>Faîtes glissser pour en savoir plus</p> </div>
+      <div class="zoneInfos apprendre-droppable-infos" >informations</div>
+      <div class="oiseaux">
+        <img  class="apprendre-draggable" id="draggable" src="./images/ligne-espece-canard.png" alt="especes">
+        <img  class="apprendre-draggable" src="./images/ligne-espece-rouge.png" alt="especes">
+        <img  class="apprendre-draggable" src="./images/ligne-espece-pigeon.png" alt="especes">
+        <img  class="apprendre-draggable" src="./images/ligne-espece-mesange.png" alt="especes">
+        <img  class="apprendre-draggable" src="./images/ligne-espece-corneille.png" alt="especes">
+        <div class="ligne">
+
+        </div>
+      </div>
+      <div class="zoneStats apprendre-droppable-stats">statistiques</div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="ecran-infos">
+    <div class="header header-infos">
+      <img class="logo-header" src="./images/logo-header.png" alt="">
+    </div>
+    <div class="retour-infos">retour</div>
+    <div class="titre-infos">Le Rouge-Gorge</div>
+    <div class="taille-poids">
+      <img src="./images/poids-taille.png" alt="">
+    </div>
+    <div class="sous-titre-infos">Le reconnaître facilement</div>
+    <div class="images-reconnaitre">
+      <div><img src="./images/face-rouge.png" alt="" id="gorgedurougegorge"> <p>Plumage roux orangé du front à la poitrine</p> </div>
+      <div><img src="./images/mangeoire.png" alt=""> <p>Fréquente les mangeoires</p> </div>
+    </div>
+    <div class="lieux">
+      <img src="./images/lieux.png" alt="">
+    </div>
+    <div class="manger">
+      <img src="./images/manger.png" alt="">
+    </div>
+    <div class="altitude">
+      <img src="./images/altitude.png" alt="">
+    </div>
+  </div>
+
+  <div class="ecran-stats">
+    <div class="header header-stats">
+      <img class="logo-header" src="./images/logo-header.png" alt="">
+    </div>
+    <div class="retour-stats">retour</div>
+    <div class="titre-stats"> <h1>Rouge-Gorge</h1> <p>statistiques</p> </div>
+    <div class="stat">
+      <img src="./images/rouge-gorge_1.png" alt="grosRougeGorge">
+      <h1 class="statRouge">0</h1>
+      <p>en 2018</p>
+    </div>
+    <div class="graph">
+      <img src="./images/graph.png" alt="graph">
+    </div>
+  </div>
+
+
+
+  <div class="ecran-compter">
+    <div class="header header-compter">
+      <img class="logo-header" src="./images/logo-header.png" alt="">
+    </div>
+    <div class="retour-compter">retour</div>
+    <div class="titreCompter">Faîtes glisser pour compter</div>
+    <div class="details">+Détails</div>
+    <div class="compte compter-droppable">0</div>
+    <div class="compte-details compter-droppable">
+
+      <div class="quart">
+        <h1>Canards</h1>
+        <p class="compte-canard">0</p>
+      </div>
+
+      <div class="quart">
+        <h1>Rouge-Gorges</h1>
+        <p class="compte-rouge">0</p>
+      </div>
+
+      <div class="quart">
+        <h1>Pigeons</h1>
+        <p class="compte-pigeon">0</p>
+      </div>
+
+      <div class="quart">
+        <h1>Mésanges</h1>
+        <p class="compte-mesange">0</p>
+      </div>
+
+
+      <!-- <div><div class="canard-compte">0</div> <div class="espece-compte">canards</div> </div>
+      <div><div class="rouge-compte">0</div> <div class="espece-compte">rouge-gorges</div></div>
+      <div><div class="pigeon-compte">0 </div><div class="espece-compte">pigeons</div></div>
+      <div><div class="mesange-compte">0</div> <div class="espece-compte">mesanges</div></div> -->
+
+    </div>
+    <div class="listeOiseaux">
+
+      <div>
+        <img  class="compter-draggable canard-drag" id="canard"src="./images/ligne-espece-canard.png" alt="especes">
+        <p>Canard</p>
+      </div>
+      <div>
+        <img  class="compter-draggable rouge-drag" id="rouge-gorge" src="./images/ligne-espece-rouge.png" alt="especes">
+        <p>Rouge-Gorge</p>
+      </div>
+      <div>
+        <img  class="compter-draggable pigeon-drag" src="./images/ligne-espece-pigeon.png" alt="especes">
+        <p>Pigeon</p>
+      </div>
+      <div>
+        <img  class="compter-draggable mesange-drag" src="./images/ligne-espece-mesange.png" alt="especes">
+        <p>Mésange</p>
+      </div>
+      <div>
+        <img  class="compter-draggable corneille-drag" src="./images/ligne-espece-corneille.png" alt="especes">
+        <p>Corneille</p>
+      </div>
+
+    </div>
+    <div class="listeOiseauxCases"></div>
+
+  </div>
+
+  <div class="ecran-renseignements">
+    <div class="header header-renseignements">
+      <img class="logo-header" src="./images/logo-header.png" alt="">
+    </div>
+    <div class="retour-renseignements">retour</div>
+    <div class="titreRenseignements">Compteur</div>
+    <div id=""class="sous-titre sous-titre-renseignements">Appuyer pour modifier</div>
+    <div class="zoneRenseignements">
+
+      <div class="GPS quart">
+        <h1>Rennes</h1>
+        <h2>(35000)</h2>
+        <p id="coord">coordonnées gps</p>
+      </div>
+
+      <div class="meteo quart">
+        <img src="./images/eclaricies.png" alt="picto-eclaircies">
+        <p class=" ">16°</p>
+      </div>
+
+      <div class="heure quart">
+        <h1> <script type="text/javascript">
+        var currentdate = new Date();
+    var datetime = " " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/"
+                + currentdate.getFullYear() + " "
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + ":"
+                + currentdate.getSeconds();
+document.write(datetime);
+        </script> </h1>
+      </div>
+
+    </div>
+
+    <div class="zoneRenseignementsGPS">
+
+      <div class="GPS quart">
+
+        <input id="tags" type="text" name="" value="">
+        <p id="coord">coordonnées gps</p>
+      </div>
+
+    </div>
+
+    <div class="zoneRenseignementsMETEO">
+
+      <div class="METEO quart">
+        <img id="orage" src="./images/orage.png" alt="orage">
+        <img id="eclaircies" src="./images/eclaricies.png" alt="eclaircies">
+        <img id="pluie" src="./images/pluie.png" alt="pluie">
+        <img id="neige" src="./images/neige.png" alt="neige">
+        <img id="soleil" src="./images/soleil.png" alt="soleil">
+        <img id="nuage" src="./images/nuageux.png" alt="nuage">
+      </div>
+
+    </div>
+
+    <div class="boutonValider">
+      <img  class="validerRenseignements" src="./images/valider.png" alt="valider">
+    </div>
+
+    <div class="boutonValiderModif">
+      <img  class="validerRenseignements" src="./images/valider-modif.png" alt="valider">
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

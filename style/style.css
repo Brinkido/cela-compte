@@ -1,0 +1,737 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.header{
+  text-align: center;
+  position: fixed;
+  width: 1080px;
+  margin: 0 auto;
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ginora Sans", sans-serif;
+  height:200px;
+  background:#410030;
+  color:#ffedc9;
+}
+
+.ecran-accueil{
+  margin: 0 auto;
+  background-color:#f05760;
+  width:1080px;
+  height:1920px;
+  display:flex;
+  flex-wrap:wrap;
+  bottom:0;
+}
+
+.GPS{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+input{
+  height:100px;
+  font-size: 40px;
+  display: flex;
+  width:100%;
+  font-family: "Ginora Sans", sans-serif;
+  border-style: none;
+  border-radius: 20px;
+  background-color: #f05760;
+}
+
+.logoPartenaires{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logoPartenaires > img{
+  object-fit: contain;
+  width:80%;
+  display:flex;
+  justify-content: center;
+}
+
+.logoAccueil{
+  top:0;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 700px;
+}
+
+.logoAccueil > img{
+  object-fit: contain;
+  width:80%;
+  display:flex;
+  justify-content: center;
+}
+
+.boutonCommencer{
+  position: fixed;
+  background-color: #ffedc9;
+  border-style: dashed;
+  border-radius: 25px 25px 0 0;
+  width:100%;
+  top:1119px;
+  width:1080px;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+}
+
+.boutonCommencer > p{
+  font-size: 40px;
+  font-family: "Ginora Sans", sans-serif;
+  color:#410030;
+  margin-top: 100px;
+}
+
+.boutonCommencer:hover{
+  height:850px;
+  transition:1s;
+}
+
+.wraper{
+  width:100%;
+  margin-top: 100px;
+  background-color: yellow;
+}
+
+.ecran1{
+  margin:0 auto;
+  width:1080px;
+  display: flex;
+}
+
+#compter:hover{
+  background-color:#410030;
+  transition: 0.2s;
+  color:#ffedc9;
+  cursor:pointer;
+}
+
+#apprendre:hover{
+  background-color:#410030;
+  transition: 0.2s;
+  color:#ffedc9;
+  cursor:pointer;
+}
+
+p:hover{
+  cursor:pointer;
+}
+
+.header:hover{
+  height:230px;
+  transition:0.4s;
+}
+
+.entier{
+  color:#410030;
+  font-family: "Ginora Sans",  sans-serif;
+  justify-content: center;
+  text-align: center;
+  height:910px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+}
+
+#compter{
+  background-color:#f05760;
+}
+
+#apprendre{
+  background-color:#ffedc9;
+}
+
+/* .ecran-apprendre{
+  position: fixed;
+  margin: 0 auto;
+  background-color:#ffedc9;
+  width:1080px;
+  height:2090px;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: 0.3fr 0.7fr 0.1fr 0.9fr 0.1fr 1.1fr 0.1fr 0.9fr 0.4fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;}
+
+  .retour { grid-area: 1 / 1 / 2 / 2; }
+  .titreApprendre { grid-area: 2 / 2 / 3 / 3; }
+  .zoneInfos { grid-area: 4 / 2 / 5 / 3; }
+  .oiseaux { grid-area: 6 / 1 / 7 / 4; }
+  .zoneStats { grid-area: 8 / 2 / 9 / 3; } */
+
+
+.ecran-apprendre{
+  margin: 0 auto;
+  background-color:#ffedc9;
+  width:1080px;
+  height:2090px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.zoneInfos, .zoneStats{
+  margin: 100px;
+  height:300px;
+  width:100%;
+  font-size: 80px;
+  font-family: "Ginora Sans", sans-serif;
+  border-style: dashed;
+  display:flex;
+  background-color: #FFE26B;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color:#410030;
+  border-radius: 50px;
+  border-width:12px;
+}
+
+.titreApprendre{
+  margin-top:50px;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  height:200px;
+}
+
+.titreApprendre > h1{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size:130px;
+  font-family: "Ginora Sans",sans-serif;
+  color:#410030;
+}
+
+.titreApprendre > p{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size:50px;
+  font-family: "Ginora Sans",sans-serif;
+  color:#410030;
+}
+
+.retour-apprendre{
+  margin-top:200px;
+  width:100%;
+}
+
+.retour, .retour-compter, .retour-renseignements, .retour-infos{
+background-color:#f05760;
+display: flex;
+align-items:center;
+justify-content:center;
+font-family: "Ginora Sans", sans-serif;
+font-size: 35px;
+border-radius:50px;
+border-style: dashed;
+margin-right: auto;
+height:75px;
+width:35%;
+text-align: center;
+}
+
+.retour:hover{
+  cursor:pointer;
+}
+
+
+.oiseaux{
+  display: flex;
+  flex-wrap: wrap;
+  height:300px;
+  width:1920px;
+}
+.oiseaux > img {
+  object-fit: contain;
+  width: 20%;
+  margin-right: 0px;
+
+}
+
+.ligne{
+  height:1px;
+  border-style:dashed;
+  border-width:6px;
+  border-color:#410030;
+}
+
+.logo-header{
+  width:30%;
+}
+
+.dropped{
+  width:1000px;
+  height:10px;
+
+}
+
+
+.ecran-compter {
+  margin: 0 auto;
+  background-color:#ffedc9;
+  width:1080px;
+  height:2090px;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr 0.2fr 1fr 4fr 0.2fr repeat(2, 2fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* .titreCompter, .details, .compte, .compte-details{
+position:fixed;
+} */
+
+.retour { grid-area: 1 / 1 / 2 / 2; }
+.titreCompter { grid-area: 3 / 2 / 4 / 3; }
+.details { grid-area: 5 / 2 / 6 / 3; }
+.compte { grid-area: 6 / 2 / 7 / 3; }
+.compte-details { grid-area: 6 / 2 / 7 / 3; }
+.listeOiseaux { grid-area: 8 / 1 / 9 / 4; }
+.listeOiseauxCases{ grid-area: 9 / 1 / 10 / 4; }
+
+.compte, .zoneRenseignements, .zoneRenseignementsGPS, .zoneRenseignementsMETEO{
+  background:#f05760;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 300px;
+  font-family: "Ginora Sans", sans-serif;
+  color:#410030;
+  border-radius: 50px;
+  border-style: dashed;
+  border-width: 15px;
+  border-collapse: collapse;
+  width:100%;
+}
+
+.compte-details{
+  background:#ffedc9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 300px;
+  font-family: "Ginora Sans", sans-serif;
+  color:#410030;
+  border-radius: 50px;
+  border-style: dashed;
+  border-width: 15px;
+  border-collapse: collapse;
+  flex-wrap: wrap;
+}
+
+  /* .compte-details > div{
+  width:100%;
+  display: flex;
+  } */
+
+  /* .rouge-compte, .canard-compte, .pigeon-compte, .mesange-compte{
+  font-size: 250px;
+}
+
+.espece-compte{
+font-size: 25px;
+}
+
+.compte-details > div{
+
+display:flex;
+width:50%;
+}
+.canard-compte > p, .rouge-compte > p, .pigeon-compte > p, .mesange-compte > p {
+font-size: 35px;
+} */
+
+.quart{
+  display:flex;  width:50%;
+  font-size: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.quart > p, .quart > h1{
+  display: flex;
+  width:100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.quart > p {
+  font-size: 125px;
+}
+
+.titreCompter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:100px;
+  font-family: "Ginora Sans",sans-serif;
+  color:#410030;
+  text-align: center;
+}
+
+.details{
+  font-family:"Ginora Sans", sans-serif;
+  height:100px;
+  font-size:50px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#410030;
+  background-color:;
+  border-radius:25px 25px 0 0;
+  border-width:5px;
+  border-style:dashed dashed none dashed;
+  border-color:#410030;
+}
+
+.details:hover{
+  background-color: #410030;
+  color:#ffedc9;
+}
+
+.retour-compter, .retour-renseignements, .retour-infos, .retour-stats, .retour-apprendre{
+  width:200px;
+  height:100px;
+  border-radius: 0 0 50px 0;
+}
+
+.retour-compter:hover{
+  cursor:pointer;
+}
+
+.listeOiseaux{
+  width: 1607px;
+  display:flex;
+}
+
+.listeOiseaux > div > img{
+  object-fit: contain;
+  width:100%;
+  margin-right: 50px;
+}
+
+.listeOiseaux > div > p{
+  font-size: 30px;
+  font-family: "Ginora Sans";
+  color:#410030;
+  text-align: center;
+}
+
+.listeOiseaux > div{
+  width:30%;
+}
+
+/* .ecran-infos {
+margin: 0 auto;
+background-color:#ffedc9;
+width:1080px;
+height:2390px;
+display: grid;
+grid-template-columns: 0.5fr repeat(2, 2fr) 0.5fr;
+grid-template-rows: 0.7fr 2fr 0.5fr repeat(2, 1fr) repeat(2, 2fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.retour-infos { grid-area: 1 / 1 / 2 / 2; }
+.titre-infos { grid-area: 1 / 2 / 2 / 4; }
+.taille-poids { grid-area: 2 / 2 / 3 / 4; }
+.sous-titre { grid-area: 3 / 2 / 4 / 3; }
+.images-reconnaitre { grid-area: 4 / 2 / 5 / 4; }
+.lieux { grid-area: 5 / 2 / 6 / 4; }
+.manger { grid-area: 6 / 2 / 7 / 4; }
+.altitude { grid-area: 7 / 2 / 8 / 4; } */
+
+.ecran-infos{
+  margin: 0 auto;
+  background-color:#ffedc9;
+  width:1080px;
+  height:5000px;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.retour-infos{
+  margin-top: 200px;
+}
+
+.retour-infos:hover{
+  cursor:pointer;
+  color:#f05760;
+  background-color: #410030;
+}
+
+.sous-titre-infos{
+  font-size: 50px;
+  font-family:"Ginora Sans",sans-serif;
+  color:#410030;
+  margin:20px 100px;
+}
+
+.images-reconnaitre{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom:100px;
+}
+
+.images-reconnaitre > div{
+  width:40%;
+  display: flex;
+  flex-wrap: wrap;
+  margin:-120px 50px;
+  justify-content:space-evenly;
+}
+
+.images-reconnaitre > div > p{
+  font-size: 30px;
+  font-family: "Ginora Sans";
+  color:#410030;
+  text-align: center;
+}
+
+.images-reconnaitre > div > img{
+  object-fit: contain;
+  width:50%;
+}
+
+#gorgedurougegorge{
+  width:30%;
+}
+
+.titre-infos{
+  width:100%;
+
+  text-align:center;
+  flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:100px;
+  font-family:"Ginora Sans",sans-serif;
+  color:#410030;
+  text-align:center;
+}
+
+.taille-poids > img, .lieux > img, .manger > img, .altitude > img{
+  width:100%;
+  background-color:#ffedc9;
+  margin-top: 100px;
+}
+
+.details:hover{
+  cursor:pointer;
+}
+
+
+.header-compter{
+  margin-bottom: 100px;
+}
+
+.ui-droppable-hover{
+  background-color: #FFE26B;
+  transition: 1s;
+}
+
+.ecran-renseignements{
+  margin: 0 auto;
+  background-color:#ffedc9;
+  width:1080px;
+  height:2090px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.zoneRenseignements, .zoneRenseignementsGPS{
+  flex-wrap: wrap;
+  height:1000px;
+  margin:0 100px;
+}
+
+.zoneRenseignementsGPS{
+  background-color: #ffedc9;
+}
+
+.zoneRenseignementsMETEO{
+  margin:0 50px;
+}
+
+.METEO{
+  justify-content: space-around;
+}
+
+.METEO > img{
+  width:50%;
+  justify-content: space-around;
+  display:flex;
+  object-fit: contain;
+}
+
+.titreRenseignements, .titre-stats > h1{
+  height:58px;
+  width:100%;
+  align-items:center;
+  justify-content: center;
+  display: flex;
+  font-size: 100px;
+  font-family: "Ginora Sans";
+  color:#410030;
+}
+
+.sous-titre-renseignements{
+  display:flex;
+  justify-content: center;
+  width:100%;
+  font-size: 50px;
+  font-family:"Ginora Sans",sans-serif;
+  color:#410030;
+}
+
+
+#coord{
+  font-size: 50px;
+}
+
+.meteo > img{
+  width: 78%;
+}
+
+.boutonValider, .boutonValiderModif{
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+  text-align: center;
+}
+
+.validerModif{
+  background-color: red;
+}
+
+.boutonValider > img, .boutonValiderModif > img{
+  width: 26%;
+  /* height: 77%; */
+  object-fit: contain;
+}
+
+.boutonValider:hover, .boutonValiderModif:hover{
+  cursor:pointer;
+}
+
+.boutonValider > img:hover, .boutonValiderModif > img:hover{
+  width:28%;
+}
+
+.retour-renseignements{
+  height: 93px;
+  margin-top: 200px;}
+
+.retour-renseignements:hover{
+    cursor:pointer;
+}
+
+.heure > h1{
+  font-size: 120px;
+}
+
+.ecran-stats{
+  margin: 0 auto;
+  background-color:#ffedc9;
+  width:1080px;
+  height:2000px;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.titre-stats{
+  margin-top:50px;
+  height:200px;
+  width: 100%;
+}
+
+.titre-stats > p{
+  font-size:50px;
+  width: 100%;
+  text-align:center;
+  margin-top:50px;
+  font-family: "Ginora Sans",sans-serif;
+  color:#410030;
+}
+
+.graph{
+  display: flex;
+  justify-content: center;
+}
+
+.graph > img {
+  object-fit: contain;
+  width:85%;
+}
+
+.stat{
+  display: flex;
+  width:50%;
+  align-items: center;
+}
+
+.stat > img{
+  object-fit: contain;
+}
+
+.stat > h1{
+  height:58px;
+  width:100%;
+  align-items:center;
+  justify-content: center;
+  display: flex;
+  font-size: 400px;
+  font-family: "Ginora Sans";
+  color:#410030;
+}
+
+.stat > p{
+  height:58px;
+  width:100%;
+  align-items:center;
+  justify-content: center;
+  display: flex;
+  font-size:100px;
+  font-family: "Ginora Sans";
+  color:#410030;
+}
+
+.select{
+  background-color:#FFE26B;
+  width:1000px;
+  border-style: double;
+  border-width: medium;
+  border-color: yellow;
+  transition: 0.2s;
+  
+  border:20px;
+}
