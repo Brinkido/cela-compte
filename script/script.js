@@ -9,6 +9,7 @@ $(document).ready(function(){
   $(".zoneRenseignementsMETEO").hide()
   $(".boutonValiderModif").hide()
   $(".ecran-stats").hide()
+  $(".ecran-terminer").hide()
   $(".boutonCommencer").click(clickCommencer)
   $("#pluie").click(clickPluie)
   $("#orage").click(clickOrage)
@@ -28,9 +29,24 @@ $(document).ready(function(){
   $(".GPS").click(clickGPS)
   $(".meteo").click(clickMETEO)
   $(".boutonValiderModif").click(clickValiderModif)
+  $(".boutonMoins").click(clickBoutonMoins)
+  $(".boutonTerminer").click(clickBoutonTerminer)
+  $("#logo-header-compter").click(clickHeader)
+  $(".img-terminer").click(clickHeader)
+
 
 
 });
+
+function clickBoutonTerminer(){
+  $(".ecran-terminer").show()
+  $(".ecran-compter").hide()
+}
+
+
+function clickBoutonMoins(){
+$( ".compte").html( parseInt($( ".compte").text()) - 1 );
+}
 
 function clickOrage(){
   $(".meteo").html("<img src=./images/orage.png>");
@@ -138,13 +154,14 @@ function clickCompter(){
 }
 
 function clickHeader(){
-  $(".ecran-accueil").show()
-  $(".ecran1").hide()
+  $(".ecran1").show()
+  $(".ecran-accueil").hide()
   $(".ecran-apprendre").hide()
   $(".ecran-compter").hide()
   $(".ecran-renseignements").hide()
   $(".ecran-infos").hide()
   $(".ecran-stats").hide()
+  $(".ecran-terminer").hide()
   }
 
 function clickRetour(){
@@ -184,7 +201,12 @@ $( ".compter-droppable" ).droppable({drop: function( event, ui ) {
     $( ".statRouge").html( parseInt($( ".statRouge").text()) + 1 );
 
         if ( $(event.toElement).hasClass('canard-drag')) {
-        $(".compte-canard").html( parseInt($( ".compte-canard").text()) + 1 );}
+        $(".compte-canard").html( parseInt($( ".compte-canard").text()) + 1 );
+        function clickBoutonMoins(){
+        $( ".compte-canard").html( parseInt($( ".compte-canard").text()) - 1 );
+        }
+
+      }
 
         if ( $(event.toElement).hasClass('rouge-drag')) {
         $(".compte-rouge").html( parseInt($( ".compte-rouge").text()) + 1 );}
@@ -197,6 +219,9 @@ $( ".compter-droppable" ).droppable({drop: function( event, ui ) {
 
   }
 });
+
+
+
 
 $( ".ui-droppable-hover" ).droppable({drop: function( event, ui ) {
 
