@@ -294,7 +294,7 @@ text-align: center;
   width:1080px;
   height:2090px;
   display: grid;
-  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-columns: 0fr 7fr 2fr;
   grid-template-rows: 1fr 0.5fr 1fr 0.2fr 1fr 4fr 0.2fr repeat(2, 2fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -310,7 +310,7 @@ position:fixed;
 .compte { grid-area: 6 / 2 / 7 / 3; }
 .compte-details { grid-area: 6 / 2 / 7 / 3; }
 .listeOiseaux { grid-area: 8 / 1 / 9 / 4; }
-.listeOiseauxCases{ grid-area: 9 / 1 / 10 / 4; }
+.boutonMoins{ grid-area: 9 / 1 / 10 / 4; }
 
 .compte, .zoneRenseignements, .zoneRenseignementsGPS, .zoneRenseignementsMETEO{
   background:#f05760;
@@ -425,7 +425,7 @@ font-size: 35px;
 }
 
 .listeOiseaux{
-  width: 1607px;
+  width: 1080px;
   display:flex;
 }
 
@@ -446,26 +446,45 @@ font-size: 35px;
   width:30%;
 }
 
-/* .ecran-infos {
-margin: 0 auto;
-background-color:#ffedc9;
-width:1080px;
-height:2390px;
-display: grid;
-grid-template-columns: 0.5fr repeat(2, 2fr) 0.5fr;
-grid-template-rows: 0.7fr 2fr 0.5fr repeat(2, 1fr) repeat(2, 2fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+
+.boutonMoins{
+  background:#f05760;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Ginora Sans", sans-serif;
+  color:#410030;
+  border-radius: 50px;
+  border-style: dashed;
+  border-width: 5px;
+  width:50%;
+  right:150px;
+  margin:auto;
+
+  height:100px;
 }
 
-.retour-infos { grid-area: 1 / 1 / 2 / 2; }
-.titre-infos { grid-area: 1 / 2 / 2 / 4; }
-.taille-poids { grid-area: 2 / 2 / 3 / 4; }
-.sous-titre { grid-area: 3 / 2 / 4 / 3; }
-.images-reconnaitre { grid-area: 4 / 2 / 5 / 4; }
-.lieux { grid-area: 5 / 2 / 6 / 4; }
-.manger { grid-area: 6 / 2 / 7 / 4; }
-.altitude { grid-area: 7 / 2 / 8 / 4; } */
+.boutonTerminer{
+  background:#FFE26B;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Ginora Sans", sans-serif;
+  color:#410030;
+  border-radius: 50px;
+  border-style: dashed;
+  border-width: 5px;
+  width:30%;
+  height:100px;
+  margin-left: 150px;
+}
+
+
+
 
 .ecran-infos{
   margin: 0 auto;
@@ -475,6 +494,8 @@ grid-row-gap: 0px;
   display:flex;
   flex-wrap:wrap;
 }
+
+
 
 .retour-infos{
   margin-top: 200px;
@@ -551,6 +572,22 @@ grid-row-gap: 0px;
 
 .header-compter{
   margin-bottom: 100px;
+  text-align: center;
+  position: fixed;
+  width: 1080px;
+  margin: 0 auto;
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ginora Sans", sans-serif;
+  height:200px;
+  background:#410030;
+  color:#ffedc9;
+}
+.header-compter:hover{
+  height:230px;
+  transition:0.4s;
 }
 
 .ui-droppable-hover{
@@ -645,6 +682,7 @@ grid-row-gap: 0px;
 
 .boutonValider > img:hover, .boutonValiderModif > img:hover{
   width:28%;
+  transition: 0.2s;
 }
 
 .retour-renseignements{
@@ -732,6 +770,38 @@ grid-row-gap: 0px;
   border-width: medium;
   border-color: yellow;
   transition: 0.2s;
-  
+
   border:20px;
+}
+
+.ecran-terminer{
+  margin: 0 auto;
+  background-color:#ffedc9;
+  width:1080px;
+  height:2090px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.ctoutbon{
+  font-size: 100px;
+  text-align:center;
+  font-family: "Ginora Sans", sans-serif;
+  color:#410030;
+  }
+
+.img-terminer{
+  margin-top:200px;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+  align-items: center;
+  width:50%;
+}
+
+.img-terminer:hover{
+  width:55%;
+  transition: 0.2s;
 }
