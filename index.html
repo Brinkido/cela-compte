@@ -19,18 +19,18 @@
 <body>
 
 
-<div class="ecran-accueil">
-  <div class="logoPartenaires">
-    <img src="./images/logo-partenaires.png" alt="">
-  </div>
-  <div class="logoAccueil">
-    <img src="./images/logo-accueil.png" alt="">
-  </div>
-  <div class="boutonCommencer">
-    <p>commencer</p>
-  </div>
+  <div class="ecran-accueil">
+    <div class="logoPartenaires">
+      <img src="./images/logo-partenaires.png" alt="">
+    </div>
+    <div class="logoAccueil">
+      <img src="./images/logo-accueil.png" alt="">
+    </div>
+    <div class="boutonCommencer">
+      <p>commencer</p>
+    </div>
 
-</div>
+  </div>
 
 
   <div class="ecran1">
@@ -43,6 +43,9 @@
       <div class="entier" id="apprendre">
         <img src="./images/mascotte-apprendre.png" alt="">
         <p>apprendre</p>
+
+      </div>
+      <div class="ligne">
 
       </div>
       <div class="entier" id="compter">
@@ -131,7 +134,7 @@
 
   <div class="ecran-compter">
     <div class="header-compter">
-      <img id="logo-header-compter"  class="logo-header" src="./images/logo-header.png" alt="">
+      <img id="logo-header-compter" class="logo-header" src="./images/logo-header.png" alt="">
       <div class="boutonTerminer">
         terminer
       </div>
@@ -139,7 +142,7 @@
     <div class="retour-compter">retour</div>
     <div class="titreCompter">Faîtes glisser pour compter</div>
     <div class="details">+Détails</div>
-    <div class="compte compter-droppable">0</div>
+    <div id="chiffre" class="compte compter-droppable">0</div>
     <div class="compte-details compter-droppable">
 
       <div class="quart">
@@ -162,11 +165,6 @@
         <p class="compte-mesange">0</p>
       </div>
 
-
-      <!-- <div><div class="canard-compte">0</div> <div class="espece-compte">canards</div> </div>
-      <div><div class="rouge-compte">0</div> <div class="espece-compte">rouge-gorges</div></div>
-      <div><div class="pigeon-compte">0 </div><div class="espece-compte">pigeons</div></div>
-      <div><div class="mesange-compte">0</div> <div class="espece-compte">mesanges</div></div> -->
 
     </div>
     <div class="listeOiseaux">
@@ -208,8 +206,8 @@
     <div class="zoneRenseignements">
 
       <div class="GPS quart">
-        <h1>Rennes</h1>
-        <h2>(35000)</h2>
+        <h1 id="rennes"class="rennes">Rennes</h1>
+        
         <p id="coord">coordonnées gps</p>
       </div>
 
@@ -221,13 +219,13 @@
       <div class="heure quart">
         <h1> <script type="text/javascript">
         var currentdate = new Date();
-    var datetime = " " + currentdate.getDate() + "/"
-                + (currentdate.getMonth()+1)  + "/"
-                + currentdate.getFullYear() + " "
-                + currentdate.getHours() + ":"
-                + currentdate.getMinutes() + ":"
-                + currentdate.getSeconds();
-document.write(datetime);
+        var datetime = " " + currentdate.getDate() + "/"
+        + (currentdate.getMonth()+1)  + "/"
+        + currentdate.getFullYear() + " "
+        + currentdate.getHours() + ":"
+        + currentdate.getMinutes() + ":"
+        + currentdate.getSeconds();
+        document.write(datetime);
         </script> </h1>
       </div>
 
@@ -236,9 +234,13 @@ document.write(datetime);
     <div class="zoneRenseignementsGPS">
 
       <div class="GPS quart">
+    <p id="coord">Dans quelle ville comptez-vous ?</p>
+        <input id="tags" type="text" name="tags" value="">
+        <button type="button"
+            onclick="validerGPS()">
+      OK
+  </button>
 
-        <input id="tags" type="text" name="" value="">
-        <p id="coord">coordonnées gps</p>
       </div>
 
     </div>
@@ -252,6 +254,9 @@ document.write(datetime);
         <img id="neige" src="./images/neige.png" alt="neige">
         <img id="soleil" src="./images/soleil.png" alt="soleil">
         <img id="nuage" src="./images/nuageux.png" alt="nuage">
+      </div>
+      <div class="temperature">
+        16
       </div>
 
     </div>

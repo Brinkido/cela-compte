@@ -26,6 +26,7 @@ $(document).ready(function(){
   $(".details").click(clickDetails)
   $(".boutonValider").click(clickValiderRenseignements)
   $(".retour-renseignements").click(clickRetourRenseignements)
+  $(".retour-stats").click(clickRetourStats)
   $(".GPS").click(clickGPS)
   $(".meteo").click(clickMETEO)
   $(".boutonValiderModif").click(clickValiderModif)
@@ -33,19 +34,22 @@ $(document).ready(function(){
   $(".boutonTerminer").click(clickBoutonTerminer)
   $("#logo-header-compter").click(clickHeader)
   $(".img-terminer").click(clickHeader)
-
-
-
+  $("#tags").click(clickInput)
 });
+
+
+function clickRetourStats(){
+  $(".ecran-apprendre").show()
+  $(".ecran-stats").hide()
+}
 
 function clickBoutonTerminer(){
   $(".ecran-terminer").show()
   $(".ecran-compter").hide()
 }
 
-
 function clickBoutonMoins(){
-$( ".compte").html( parseInt($( ".compte").text()) - 1 );
+  $( ".compte").html( parseInt($( ".compte").text()) - 1 );
 }
 
 function clickOrage(){
@@ -68,7 +72,6 @@ function deselect(){
   $("#soleil").removeClass("select");
   $("#soleil").click(clickSoleil)
 }
-
 
 function clickNeige(){
   $(".meteo").html("<img src=./images/neige.png>");
@@ -162,7 +165,7 @@ function clickHeader(){
   $(".ecran-infos").hide()
   $(".ecran-stats").hide()
   $(".ecran-terminer").hide()
-  }
+}
 
 function clickRetour(){
   $(".ecran1").show()
@@ -189,74 +192,86 @@ function clickDetailsFermer(){
 }
 
 $( function() {
-$( ".compter-draggable" ).draggable({
-  revert: true
+  $( ".compter-draggable" ).draggable({
+    revert: true
 
 
-});
+  });
 
-$( ".compter-droppable" ).droppable({drop: function( event, ui ) {
+  $( ".compter-droppable" ).droppable({drop: function( event, ui ) {
 
     $( ".compte").html( parseInt($( ".compte").text()) + 1 );
     $( ".statRouge").html( parseInt($( ".statRouge").text()) + 1 );
 
-        if ( $(event.toElement).hasClass('canard-drag')) {
-        $(".compte-canard").html( parseInt($( ".compte-canard").text()) + 1 );
-        function clickBoutonMoins(){
+    if ( $(event.toElement).hasClass('canard-drag')) {
+      $(".compte-canard").html( parseInt($( ".compte-canard").text()) + 1 );
+      function clickBoutonMoins(){
         $( ".compte-canard").html( parseInt($( ".compte-canard").text()) - 1 );
-        }
-
       }
 
-        if ( $(event.toElement).hasClass('rouge-drag')) {
-        $(".compte-rouge").html( parseInt($( ".compte-rouge").text()) + 1 );}
+    }
 
-        if ( $(event.toElement).hasClass('pigeon-drag')) {
+    if ( $(event.toElement).hasClass('rouge-drag')) {
+      $(".compte-rouge").html( parseInt($( ".compte-rouge").text()) + 1 );}
+
+      if ( $(event.toElement).hasClass('pigeon-drag')) {
         $(".compte-pigeon").html( parseInt($(".compte-pigeon").text()) + 1 );}
 
         if ( $(event.toElement).hasClass('mesange-drag')) {
-        $(".compte-mesange").html( parseInt($( ".compte-mesange").text()) + 1 );}
+          $(".compte-mesange").html( parseInt($( ".compte-mesange").text()) + 1 );}
 
+        }
+      });
+
+      function clickBoutonMoins(instance) {
+        this.command = instance;
+        this.done = [];
+
+        this.execute = function execute() {
+          this.command.execute();
+          this.done.push(this.command);
+        };
+        this.undo = function undo() {
+          var command = this.done.pop();
+          command.undo();
+        };
+      }
+
+
+
+
+      $( ".ui-droppable-hover" ).droppable({drop: function( event, ui ) {
+
+        addClass(".ui-droppable-hover")
+
+      }
+
+    });
+
+    $(".apprendre-draggable").draggable({
+      revert: true
+
+    });
+    $(".apprendre-droppable-infos").droppable({drop: function( event, ui ) {
+
+      $(".ecran-apprendre").hide()
+      $(".ecran-infos").show()
+
+    }
+  });
+
+  $(".apprendre-droppable-stats").droppable({drop: function(event, ui) {
+
+    $(".ecran-apprendre").hide()
+    $(".ecran-stats").show()
   }
 });
-
-
-
-
-$( ".ui-droppable-hover" ).droppable({drop: function( event, ui ) {
-
-    addClass(".ui-droppable-hover")
-
-  }
-
-});
-
-$(".apprendre-draggable").draggable({
-  revert: true
-
-});
-$(".apprendre-droppable-infos").droppable({drop: function( event, ui ) {
-
-  $(".ecran-apprendre").hide()
-  $(".ecran-infos").show()
-
-  }
-});
-
-$(".apprendre-droppable-stats").droppable({drop: function(event, ui) {
-
-  $(".ecran-apprendre").hide()
-  $(".ecran-stats").show()
-  }
-});
-
 
 $(".compter-draggable").draggable({
-    snap : true
+  snap : true
 });
 
 } );
-
 
 $( function() {
   var availableTags = [
@@ -269,8 +284,24 @@ $( function() {
     "Rennes",
     "Dunkerque",
     "Montélimar",
-  ];
+    "Rouen",
+    "Paris",
+    "Lyon",
+    "Le-Puy-en-Velay",
+    "Strasbourg",
+    "Bordeaux",
+
+    ];
   $( "#tags" ).autocomplete({
     source: availableTags
   });
-} );
+}
+);
+
+function validerGPS() {
+          var x =
+              document.getElementById("tags").value;
+
+          document.getElementById(
+            "rennes").innerHTML = x;
+      }
