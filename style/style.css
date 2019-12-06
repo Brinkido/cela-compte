@@ -643,7 +643,7 @@ p:hover{
   font-size: 50px;
 }
 
-.meteo > img{
+.meteo > div> img{
   width: 78%;
 }
 
@@ -831,3 +831,34 @@ button{
 
 button:hover{
   background-color:#f05760}
+
+.temperature{
+  text-align: center;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  width:30%
+}
+
+.temp{
+  width:100%;
+}
+
+  .plusTemp, .moinsTemps{
+    width:100%;
+    color:#ffedc9;
+    font-size: 250px;
+  }
+
+  .moinsTemp{
+    color:#ffedc9;
+  }
+
+  .plusTemp:hover{
+    background-color:#410030;
+  }
+
+  .moinsTemp:hover{
+    background-color:#410030;
+  }

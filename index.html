@@ -207,13 +207,13 @@
 
       <div class="GPS quart">
         <h1 id="rennes"class="rennes">Rennes</h1>
-        
+
         <p id="coord">coordonnées gps</p>
       </div>
 
       <div class="meteo quart">
-        <img src="./images/eclaricies.png" alt="picto-eclaircies">
-        <p class=" ">16°</p>
+        <div class="pictoMeteo"><img class="pictoMeteo" src="./images/eclaricies.png" alt="picto-eclaircies"></div>
+        <p class="mainTemp">16°</p>
       </div>
 
       <div class="heure quart">
@@ -256,7 +256,13 @@
         <img id="nuage" src="./images/nuageux.png" alt="nuage">
       </div>
       <div class="temperature">
-        16
+        <div class="plusTemp">
+          +
+        </div>
+        <div class="temp">16</div>
+        <div class="moinsTemp">
+          -
+        </div>
       </div>
 
     </div>
@@ -265,7 +271,7 @@
       <img  class="validerRenseignements" src="./images/valider.png" alt="valider">
     </div>
 
-    <div class="boutonValiderModif">
+    <div onclick="validerTemp()" class="boutonValiderModif">
       <img  class="validerRenseignements" src="./images/valider-modif.png" alt="valider">
     </div>
 
