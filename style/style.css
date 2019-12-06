@@ -4,6 +4,32 @@
   box-sizing: border-box;
 }
 
+/* FONTS */
+@font-face {
+  font-family: "Jineaura";
+  src: url("../fonts/Gin¢ra Sans Regular.otf");
+}
+
+@font-face {
+  font-family: "JineauraSemiBold";
+  src: url("../fonts/Gin¢ra Sans Semi Bold.otf");
+}
+
+@font-face {
+  font-family: "JineauraBold";
+  src: url("../fonts/Gin¢ra Sans Bold.otf");
+}
+
+@font-face {
+  font-family: "JineauraLight";
+  src: url("../fonts/Gin¢ra Sans Light.otf");
+}
+
+@font-face {
+  font-family: "JineauraOblique";
+  src: url("../fonts/Gin¢ra Sans Oblique.otf");
+}
+
 .header{
   text-align: center;
   position: fixed;
@@ -13,7 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "Jineaura", sans-serif;
   height:200px;
   background:#410030;
   color:#ffedc9;
@@ -39,10 +65,13 @@ input{
   font-size: 40px;
   display: flex;
   width:100%;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "Jineaura", sans-serif;
   border-style: none;
   border-radius: 20px;
   background-color: #f05760;
+  text-align: center;
+  color:#410030;
+  margin:100px 0;
 }
 
 .logoPartenaires{
@@ -88,7 +117,7 @@ input{
 
 .boutonCommencer > p{
   font-size: 40px;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "JineauraLight", sans-serif;
   color:#410030;
   margin-top: 100px;
 }
@@ -135,7 +164,7 @@ p:hover{
 
 .entier{
   color:#410030;
-  font-family: "Ginora Sans",  sans-serif;
+  font-family: "JineauraSemiBold",  sans-serif;
   justify-content: center;
   text-align: center;
   height:910px;
@@ -153,25 +182,6 @@ p:hover{
   background-color:#ffedc9;
 }
 
-/* .ecran-apprendre{
-  position: fixed;
-  margin: 0 auto;
-  background-color:#ffedc9;
-  width:1080px;
-  height:2090px;
-  display: grid;
-  grid-template-columns: 1fr 7fr 1fr;
-  grid-template-rows: 0.3fr 0.7fr 0.1fr 0.9fr 0.1fr 1.1fr 0.1fr 0.9fr 0.4fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;}
-
-  .retour { grid-area: 1 / 1 / 2 / 2; }
-  .titreApprendre { grid-area: 2 / 2 / 3 / 3; }
-  .zoneInfos { grid-area: 4 / 2 / 5 / 3; }
-  .oiseaux { grid-area: 6 / 1 / 7 / 4; }
-  .zoneStats { grid-area: 8 / 2 / 9 / 3; } */
-
-
 .ecran-apprendre{
   margin: 0 auto;
   background-color:#ffedc9;
@@ -188,7 +198,7 @@ p:hover{
   height:300px;
   width:100%;
   font-size: 80px;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "JineauraLight", sans-serif;
   border-style: dashed;
   display:flex;
   background-color: #FFE26B;
@@ -216,7 +226,7 @@ p:hover{
   text-align: center;
   justify-content: center;
   font-size:130px;
-  font-family: "Ginora Sans",sans-serif;
+  font-family: "JineauraSemiBold",sans-serif;
   color:#410030;
 }
 
@@ -228,7 +238,7 @@ p:hover{
   text-align: center;
   justify-content: center;
   font-size:50px;
-  font-family: "Ginora Sans",sans-serif;
+  font-family: "JineauraOblique",sans-serif;
   color:#410030;
 }
 
@@ -237,19 +247,19 @@ p:hover{
   width:100%;
 }
 
-.retour, .retour-compter, .retour-renseignements, .retour-infos{
-background-color:#f05760;
-display: flex;
-align-items:center;
-justify-content:center;
-font-family: "Ginora Sans", sans-serif;
-font-size: 35px;
-border-radius:50px;
-border-style: dashed;
-margin-right: auto;
-height:75px;
-width:35%;
-text-align: center;
+.retour, .retour-compter, .retour-renseignements, .retour-infos, .retour-stats{
+  background-color:#f05760;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  font-family: "JineauraLight", sans-serif;
+  font-size: 35px;
+  border-radius:50px;
+  border-style: dashed;
+  margin-right: auto;
+  height:75px;
+  width:35%;
+  text-align: center;
 }
 
 .retour:hover{
@@ -271,10 +281,11 @@ text-align: center;
 }
 
 .ligne{
-  height:1px;
+  height:3px;
   border-style:dashed;
   border-width:6px;
   border-color:#410030;
+  background-color:#ffedc9;
 }
 
 .logo-header{
@@ -284,9 +295,7 @@ text-align: center;
 .dropped{
   width:1000px;
   height:10px;
-
 }
-
 
 .ecran-compter {
   margin: 0 auto;
@@ -299,10 +308,6 @@ text-align: center;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
-
-/* .titreCompter, .details, .compte, .compte-details{
-position:fixed;
-} */
 
 .retour { grid-area: 1 / 1 / 2 / 2; }
 .titreCompter { grid-area: 3 / 2 / 4 / 3; }
@@ -318,13 +323,17 @@ position:fixed;
   justify-content: center;
   align-items: center;
   font-size: 300px;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "Jineaura", sans-serif;
   color:#410030;
   border-radius: 50px;
   border-style: dashed;
   border-width: 15px;
   border-collapse: collapse;
   width:100%;
+}
+
+#chiffre{
+  font-family: "JineauraBold", sans-serif;
 }
 
 .compte-details{
@@ -333,7 +342,7 @@ position:fixed;
   justify-content: center;
   align-items: center;
   font-size: 300px;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "JineauraSemiBold", sans-serif;
   color:#410030;
   border-radius: 50px;
   border-style: dashed;
@@ -341,28 +350,6 @@ position:fixed;
   border-collapse: collapse;
   flex-wrap: wrap;
 }
-
-  /* .compte-details > div{
-  width:100%;
-  display: flex;
-  } */
-
-  /* .rouge-compte, .canard-compte, .pigeon-compte, .mesange-compte{
-  font-size: 250px;
-}
-
-.espece-compte{
-font-size: 25px;
-}
-
-.compte-details > div{
-
-display:flex;
-width:50%;
-}
-.canard-compte > p, .rouge-compte > p, .pigeon-compte > p, .mesange-compte > p {
-font-size: 35px;
-} */
 
 .quart{
   display:flex;  width:50%;
@@ -388,13 +375,13 @@ font-size: 35px;
   align-items: center;
   justify-content: center;
   font-size:100px;
-  font-family: "Ginora Sans",sans-serif;
+  font-family: "JineauraSemiBold",sans-serif;
   color:#410030;
   text-align: center;
 }
 
 .details{
-  font-family:"Ginora Sans", sans-serif;
+  font-family:"Jineaura", sans-serif;
   height:100px;
   font-size:50px;
   width:100%;
@@ -437,7 +424,7 @@ font-size: 35px;
 
 .listeOiseaux > div > p{
   font-size: 30px;
-  font-family: "Ginora Sans";
+  font-family: "Jineaura";
   color:#410030;
   text-align: center;
 }
@@ -453,17 +440,19 @@ font-size: 35px;
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-size: 30px;
-  font-family: "Ginora Sans", sans-serif;
+  font-size:50px;
+  font-family: "Jineaura", sans-serif;
   color:#410030;
-  border-radius: 50px;
-  border-style: dashed;
-  border-width: 5px;
+  border-radius:50px;
+  border-style:dashed;
+  border-width:5px;
   width:50%;
-  right:150px;
   margin:auto;
-
   height:100px;
+}
+
+.boutonMoins:hover{
+  cursor:pointer;
 }
 
 .boutonTerminer{
@@ -473,7 +462,7 @@ font-size: 35px;
   text-align: center;
   align-items: center;
   font-size: 30px;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "JineauraSemiBold", sans-serif;
   color:#410030;
   border-radius: 50px;
   border-style: dashed;
@@ -509,7 +498,7 @@ font-size: 35px;
 
 .sous-titre-infos{
   font-size: 50px;
-  font-family:"Ginora Sans",sans-serif;
+  font-family:"Jineaura",sans-serif;
   color:#410030;
   margin:20px 100px;
 }
@@ -531,7 +520,7 @@ font-size: 35px;
 
 .images-reconnaitre > div > p{
   font-size: 30px;
-  font-family: "Ginora Sans";
+  font-family: "Jineaura";
   color:#410030;
   text-align: center;
 }
@@ -554,7 +543,7 @@ font-size: 35px;
   align-items:center;
   justify-content:center;
   font-size:100px;
-  font-family:"Ginora Sans",sans-serif;
+  font-family:"Jineaura",sans-serif;
   color:#410030;
   text-align:center;
 }
@@ -580,7 +569,7 @@ font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Ginora Sans", sans-serif;
+  font-family: "Jineaura", sans-serif;
   height:200px;
   background:#410030;
   color:#ffedc9;
@@ -636,7 +625,7 @@ font-size: 35px;
   justify-content: center;
   display: flex;
   font-size: 100px;
-  font-family: "Ginora Sans";
+  font-family: "JineauraBold";
   color:#410030;
 }
 
@@ -645,7 +634,7 @@ font-size: 35px;
   justify-content: center;
   width:100%;
   font-size: 50px;
-  font-family:"Ginora Sans",sans-serif;
+  font-family:"JineauraOblique",sans-serif;
   color:#410030;
 }
 
@@ -685,123 +674,160 @@ font-size: 35px;
   transition: 0.2s;
 }
 
-.retour-renseignements{
+.retour-renseignements, .retour-stats, .retour-compter{
   height: 93px;
   margin-top: 200px;}
 
-.retour-renseignements:hover{
+  .retour-renseignements:hover, .retour-stats:hover, .retour-compter:hover{
     cursor:pointer;
-}
+  }
 
-.heure > h1{
-  font-size: 120px;
-}
+  .heure > h1{
+    font-size: 120px;
+  }
 
-.ecran-stats{
-  margin: 0 auto;
-  background-color:#ffedc9;
-  width:1080px;
-  height:2000px;
-  display:flex;
-  flex-wrap:wrap;
-}
+  .ecran-stats{
+    margin: 0 auto;
+    background-color:#ffedc9;
+    width:1080px;
+    height:2000px;
+    display:flex;
+    flex-wrap:wrap;
+  }
 
-.titre-stats{
-  margin-top:50px;
-  height:200px;
-  width: 100%;
-}
+  .titre-stats{
+    margin-top:50px;
+    height:200px;
+    width: 100%;
+    font-family: "JineauraBold"
+  }
 
-.titre-stats > p{
-  font-size:50px;
-  width: 100%;
-  text-align:center;
-  margin-top:50px;
-  font-family: "Ginora Sans",sans-serif;
-  color:#410030;
-}
+  .titre-stats > p{
+    font-size:50px;
+    width: 100%;
+    text-align:center;
+    margin-top:50px;
+    font-family: "JineauraOblique",sans-serif;
+    color:#410030;
+  }
 
-.graph{
-  display: flex;
-  justify-content: center;
-}
+  .graph{
+    display: flex;
+    justify-content: center;
+  }
 
-.graph > img {
-  object-fit: contain;
-  width:85%;
-}
+  .graph > img {
+    object-fit: contain;
+    width:85%;
+  }
 
-.stat{
-  display: flex;
-  width:50%;
-  align-items: center;
-}
+  .stat{
+    display: flex;
+    width:50%;
+    align-items: center;
+  }
 
-.stat > img{
-  object-fit: contain;
-}
+  .stat > img{
+    object-fit: contain;
+  }
 
-.stat > h1{
-  height:58px;
-  width:100%;
-  align-items:center;
-  justify-content: center;
-  display: flex;
-  font-size: 400px;
-  font-family: "Ginora Sans";
-  color:#410030;
-}
+  .stat > h1{
+    height:58px;
+    width:100%;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    font-size: 400px;
+    font-family:"JineauraBold";
+    color:#410030;
+  }
 
-.stat > p{
-  height:58px;
-  width:100%;
-  align-items:center;
-  justify-content: center;
-  display: flex;
-  font-size:100px;
-  font-family: "Ginora Sans";
-  color:#410030;
-}
+  .stat > p{
+    height:58px;
+    width:100%;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    font-size:100px;
+    font-family: "JineauraLight";
+    color:#410030;
+  }
 
-.select{
-  background-color:#FFE26B;
-  width:1000px;
-  border-style: double;
-  border-width: medium;
-  border-color: yellow;
-  transition: 0.2s;
+  .select{
+    background-color:#FFE26B;
+    width:1000px;
+    border-style: double;
+    border-width: medium;
+    border-color: yellow;
+    transition: 0.2s;
 
-  border:20px;
-}
+    border:20px;
+  }
 
-.ecran-terminer{
-  margin: 0 auto;
-  background-color:#ffedc9;
-  width:1080px;
-  height:2090px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-}
+  .ecran-terminer{
+    margin: 0 auto;
+    background-color:#ffedc9;
+    width:1080px;
+    height:2090px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
 .ctoutbon{
-  font-size: 100px;
-  text-align:center;
-  font-family: "Ginora Sans", sans-serif;
-  color:#410030;
+    font-size: 100px;
+    text-align:center;
+    font-family: "JineauraSemiBold", sans-serif;
+    color:#410030;
   }
 
 .img-terminer{
-  margin-top:200px;
-  display: flex;
-  justify-content: center;
-  object-fit: contain;
-  align-items: center;
-  width:50%;
+    margin-top:200px;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    align-items: center;
+    width:50%;
 }
 
 .img-terminer:hover{
-  width:55%;
-  transition: 0.2s;
+    width:55%;
+    transition: 0.2s;
 }
+
+.ui-autocomplete{
+  font-size: 35px;
+  background-color: #FFE26B;
+  font-family: "JineauraLight", sans-serif;
+  color:#410030;
+  display: flex;
+  width:10%;
+  list-style: none;
+}
+
+.ui-autocomplete > li{
+margin:15px;
+}
+
+.ui-autocomplete > li:hover{
+background-color: #410030;
+color:#ffedc9;
+font-family: "JineauraOblique" , sans-serif;
+font-size: 37px;
+cursor:pointer;
+}
+
+button{
+  height: 132px;
+  width: 50%;
+  margin: 15px;
+  font-size: 47px;
+  background-color: #FFE26B;
+  font-family: "Jineaura",sans-serif;
+  border-style: none;
+  color: #410030;
+
+}
+
+button:hover{
+  background-color:#f05760}
