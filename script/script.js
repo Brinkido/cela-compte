@@ -34,9 +34,21 @@ $(document).ready(function(){
   $(".boutonTerminer").click(clickBoutonTerminer)
   $("#logo-header-compter").click(clickHeader)
   $(".img-terminer").click(clickHeader)
-  $("#tags").click(clickInput)
+
+  $(".plusTemp").click(clickplusTemp)
+  $(".moinsTemp").click(clickmoinsTemp)
 });
 
+
+function clickplusTemp(){
+  $( ".temp").html( parseInt($(".temp").text()) + 1 );
+  $( ".mainTemp").html( parseInt($(".mainTemp").text()) + 1 );
+}
+
+function clickmoinsTemp(){
+  $( ".temp").html( parseInt($(".temp").text()) - 1 );
+  $( ".mainTemp").html( parseInt($(".mainTemp").text()) - 1 );
+}
 
 function clickRetourStats(){
   $(".ecran-apprendre").show()
@@ -53,7 +65,7 @@ function clickBoutonMoins(){
 }
 
 function clickOrage(){
-  $(".meteo").html("<img src=./images/orage.png>");
+  $(".pictoMeteo").html("<img src=./images/orage.png>");
   $("#orage").addClass("select");
   $(".select").click(deselect)
 }
@@ -74,31 +86,31 @@ function deselect(){
 }
 
 function clickNeige(){
-  $(".meteo").html("<img src=./images/neige.png>");
+  $(".pictoMeteo").html("<img src=./images/neige.png>");
   $("#neige").addClass("select");
   $(".select").click(deselect)
 }
 
 function clickPluie(){
-  $(".meteo").html("<img src=./images/pluie.png>");
+  $(".pictoMeteo").html("<img src=./images/pluie.png>");
   $("#pluie").addClass("select");
   $(".select").click(deselect)
 }
 
 function clickNuage(){
-  $(".meteo").html("<img src=./images/nuageux.png>");
+  $(".pictoMeteo").html("<img src=./images/nuageux.png>");
   $("#nuage").addClass("select");
   $(".select").click(deselect)
 }
 
 function clickSoleil(){
-  $(".meteo").html("<img src=./images/soleil.png>");
+  $(".pictoMeteo").html("<img src=./images/soleil.png>");
   $("#soleil").addClass("select");
   $(".select").click(deselect)
 }
 
 function clickEclaircies(){
-  $(".meteo").html("<img src=./images/eclaricies.png>");
+  $(".pictoMeteo").html("<img src=./images/eclaricies.png>");
   $("#eclaircies").addClass("select");
   $(".select").click(deselect)
 }
@@ -119,6 +131,7 @@ function clickValiderModif(){
   $(".zoneRenseignements").show()
   $(".boutonValiderModif").hide()
   $(".boutonValider").show()
+  $(".mainTemp").validerTemp()
 }
 
 function clickGPS(){
@@ -305,3 +318,11 @@ function validerGPS() {
           document.getElementById(
             "rennes").innerHTML = x;
       }
+
+function validerTemp() {
+  var y =
+      document.getElementByClassName("temp").value;
+
+  document.getElementByClassName(
+    "mainTemp").innerHTML = y;
+}
